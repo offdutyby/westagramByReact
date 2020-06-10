@@ -1,7 +1,7 @@
-html, body {
-    height: 100%;
-  }
+
   .asd{
+    height: 700px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,11 +60,22 @@ html, body {
   }
   
   
-  .active_login_btn {
+  .login_btn {
     width: 268px;
     height: 30px;
     margin: 8px 40px;
     background-color: rgba(var(--d69,0,149,246),.3);
+    border-style: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .active_login_btn {
+    width: 268px;
+    height: 30px;
+    margin: 8px 40px;
+    background-color: blue;
     border-style: none;
     border-radius: 4px;
     color: white;

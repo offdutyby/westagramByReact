@@ -7,10 +7,10 @@ import './Styles/index.css'
 
 
 ReactDOM.render(
-  <React.StrictMode>
-
-    <Main />
-  </React.StrictMode>,
+   <Main />,
+  // <Login/>,
+    
+  
   document.getElementById('root')
 );
 

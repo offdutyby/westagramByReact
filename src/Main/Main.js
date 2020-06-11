@@ -38,22 +38,18 @@ class Body extends React.Component {
   constructor(){
     super();
     this.state={
-      userInput : ""
+      userInput : "",
+      arrInput : []
     }
   }
 
-  inputDiv = (e) => {
-    console.log("offdutybyblo",this.state.userInput)
-  }
-
-  pressBtn = (e) => {
-    this.inputDiv();
-  }
-  // this.setState({userIdInput: e.target.value});
   inputComment = (e) => {
     this.setState({userInput: e.target.value});
   }
-
+  pressBtn = (e) => {
+    this.state.arrInput.push(this.state.userInput)
+    console.log(this.state.arrInput);
+  }
 
   render(){
       return(
@@ -96,14 +92,18 @@ class Body extends React.Component {
                   11시간전
                 </div>
                 <div className="thread_add">
-                  offdutybyblo {this.state.userInput}
+                  {this.state.arrInput.map((el, idx)=>{
+                    return(
+                      <li key={idx}><span className="resultList">offdutybyblo </span>{el}</li>
+                    )
+                  })}
                 </div>
               </div>
               <div className="thread_container">
                 <div className="input_thread">
                   <div className="input_thread_form" >
                     <input 
-                    onInput={this.inputComment}
+                    onChange={this.inputComment}
                     className="form_input" 
                     id="thread_input" 
                     name="name" 
